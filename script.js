@@ -1,30 +1,42 @@
 
+let you;
+document.getElementById("daTe").innerHTML = Date()
+
+function setB() {
+  you = document.getElementById('set').value
+  if (set.value==="") {
+    error2.style.display="block"
+  }else{
+    hok.style.display="block"
+    di.style.display="none"
+    document.getElementById("owo").innerHTML = `Available Money: ₦ ${you}`
+  }
+}
+let dis = document.getElementById('ok')
+let mn = document.getElementById('owo')
+let bb = document.getElementById('bolu')
 function auth() {
   let tprice = Quantity.value * priceOne.value
   var priceOfItem = Number(tprice)
-  var newMoney = money - priceOfItem
+  var newMoney = you - priceOfItem
   owo.innerHTML = "Available Money: ₦" + newMoney
-  money =  newMoney
+  you =  newMoney
 }
-
-
-var money = 10000
+let money = you
 owo.innerHTML = "Available Money: ₦" + money 
-document.getElementById("daTe").innerHTML = Date()
-
-
 function nawo(){
  
 
     if (productOne.value == ""  || priceOne.value == "" || Quantity.value =="") {
         error.style.display="block"
-    } else if (Number(priceOne.value) > 0 && Number(priceOne.value) > money ){
+    } else if (Number(Quantity.value * priceOne.value) > 0 && Number(Quantity.value * priceOne.value) > you){
       mix.style.display="block"
       document.getElementById('productOne').value =""
         document.getElementById('priceOne').value ="" 
         document.getElementById('Quantity').value ="" 
       }
        else {
+        dis.style.display='block'
        let kol  = `<tr>
         <td>${productOne.value}</td>
         <td> ${Quantity.value}</td>
@@ -42,3 +54,14 @@ function nawo(){
           
     }
 
+
+    function myFunction() {
+      dis.style.color = 'white'
+      bb.style.color = 'white'
+      mn.style.color = 'white'
+      var element = document.body;
+      element.classList.toggle("dark-mode");
+      owo.style.color = white
+      h4.style.color = white
+   }
+   

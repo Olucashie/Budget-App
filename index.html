@@ -10,13 +10,25 @@
     <link rel="stylesheet" href="bootstrap-5.2.2-dist/css/bootstrap.css">
 </head>
 <body>
-    <div class="container">
+    <div class="container" style="display:block;" id="di">
+        <div class="row mx-auto justify-content-center" id="cont">
+            <button onclick="myFunction()" class="btn btn w-100 rounded-1 mt-1 fw-bolder" style="background-color: bisque;">Toggle dark mode</button>
+            <div class="alert alert-danger text-center" style="display: none;" id="error2">Can't Be Left Empty</div>
+            <input type="number" class="form-control my-2 rounded-1 git" placeholder="Set Budget" id="set">
+            <button class="btn btn w-100 rounded-1 mt-1 fw-bolder" style="background-color:#F6F6F7;" onclick="setB()" id="bb">Set Budget</button>
+        </div>
+    </div>
+
+
+    <div class="container" id="hok">
     <div class="row mx-auto justify-content-center" id="cont">
+        <button onclick="myFunction()" class="btn btn w-100 rounded-1 mt-1 fw-bolder" style="background-color: bisque;">Toggle dark mode</button>
+
         <div class="col-lg-12 col-12" id="right">
-            <h4 class="text-light text-decoration-underline my-2 text-center rounded-1 fw-bold"> <img src="bg-transformed.jpeg" class="me-3 rounded-5" alt="" style="width: 70px;height: 50px; border:2px solid rgba(255, 255, 255, 0.364) ">Budget Application For Bolu</h4>
+            <h4 class="text-decoration-underline my-2 text-center rounded-1 fw-bold" id="bolu"> <img src="bg-transformed.jpeg" class="me-3 rounded-5" alt="" style="width: 70px;height: 50px; border:2px solid rgba(255, 255, 255, 0.364) ">Budget Application For Bolu</h4>
             <div class="alert alert-danger text-center" style="display: none;" id="error">Can't Be Left Empty</div>
             <div class="row mt-4">
-                <p id="owo" class="mx-auto text-center text-light fw-bold"></p>
+                <p id="owo" class="mx-auto text-center fw-bold"></p>
                 <div class="col-12">
                     <p id="showReal" class ="w-100 float-end"></p>
                     <input type="text" class="form-control my-2 rounded-1 git" placeholder="Enter product Name Here" id="productOne">
@@ -25,16 +37,16 @@
                     <div class="alert alert-danger text-center" style="display: none;" id="mix">You have reached your spending limit for today <span id="daTe"></span> </div>
                     <button class="btn btn w-100 rounded-1 mt-1 fw-bolder" style="background-color:#F6F6F7;" onclick="nawo()" id="bb">Add</button>
                     <!-- <p id="showOne" class ="w-100 text-danger fw-bolder mt-2"></p> -->
-                    <table class="table table-border border-striped">
+                    <table class="table table-border border-striped" id="ok" style="display: none;">
                         <thead>
                             <tr>
-                                <td>Product</td>
-                                <td>Quantity</td>
-                                <td>Price</td>
-                                <td>Total Price</td>
+                                <td class="fw-bold">Product</td>
+                                <td class="fw-bold">Quantity</td>
+                                <td class="fw-bold">Price</td>
+                                <td class="fw-bold">Total Price</td>
                             </tr>
                         </thead>
-                        <tbody id="showOne">
+                        <tbody id="showOne" class="fw-bold">
 
                         </tbody>
                     </table>
